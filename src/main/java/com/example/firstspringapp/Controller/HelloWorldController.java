@@ -9,7 +9,7 @@ public class HelloWorldController {
     public String Hello(){
         return "Hello Ashutosh";
     }
-@GetMapping("/sayhello")
+@RequestMapping("/sayhello")
     public String SayHelloDiffrently(){
 
         return "Hello Bridgelabz";
@@ -18,5 +18,10 @@ public class HelloWorldController {
     @RequestMapping(value = {"/query"},method = RequestMethod.GET)
     public String sayHello(@RequestParam(value = "name")String name){
         return "Hello"+name+"From Bridgelabz!!!";
+    }
+    // UC3--------->
+    @GetMapping("/param/{name}")
+    public String sayHelloParam(@PathVariable String name){
+        return "Hello Mr/Mrs"+name+"!!";
     }
 }

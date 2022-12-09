@@ -18,4 +18,5 @@ public class HelloWorldWeb {
         model.addAttribute("message","This Is Custom Message.Hello From Bridgelabz");
         return "Hello From Bridgelabz";
    }
+
 }
