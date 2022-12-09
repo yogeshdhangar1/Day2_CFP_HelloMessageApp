@@ -1,10 +1,8 @@
 package com.example.firstspringapp.Controller;
 
+import com.example.firstspringapp.Model.User;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @ResponseBody
@@ -18,5 +16,9 @@ public class HelloWorldWeb {
         model.addAttribute("message","This Is Custom Message.Hello From Bridgelabz");
         return "Hello From Bridgelabz";
    }
-
+   @PutMapping("/web/firstName")
+    public String msg(User user){
+        user.getFirstName();
+        return "hello My First Name Is Yogesh";
+   }
 }
